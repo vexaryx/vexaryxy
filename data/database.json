@@ -1,0 +1,134 @@
+{
+  "users": [
+    {
+      "id": "user_admin_initial",
+      "name": "Fede Zyljx",
+      "email": "fedezyljx@gmail.com",
+      "phone": "5491140001122",
+      "countryCode": "AR",
+      "countryName": "Argentina",
+      "dialCode": "+54",
+      "role": "admin",
+      "status": "active",
+      "passwordHash": "$2b$10$uuysfHR9iBl.BVdw9vvbCuxmE8PHa4SABCo1GbHIiwe0wnwZG2k6K",
+      "createdAt": "2026-10-28T15:59:19.651Z",
+      "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&auto=format&fit=crop&q=80",
+      "lastLogin": "2026-10-28T18:07:13.892Z"
+    }
+  ],
+  "announcements": [
+    {
+      "id": "ad_1793210975502_9bbpfd",
+      "title": "Tetas",
+      "description": "Pruebas",
+      "mediaType": "image",
+      "mediaUrl": "/uploads/233327jpg_1793210949708.jpg",
+      "externalUrl": "https://vexaryx.vercel.app",
+      "externalPreview": {
+        "title": "vexaryx.vercel.app",
+        "description": "Enlace externo verificado por VEXARYX",
+        "domain": "vexaryx.vercel.app"
+      },
+      "placement": "hero",
+      "durationDays": 30,
+      "status": "active",
+      "badge": "Vexaryx",
+      "impressions": 2,
+      "clicks": 1,
+      "createdAt": "2026-10-28T18:09:35.502Z",
+      "expiresAt": "2026-11-27T18:09:35.502Z"
+    }
+  ],
+  "projects": [
+    {
+      "id": "proj_1793211077133_7k4ya",
+      "title": "Vexaryx",
+      "category": "app",
+      "description": "Tetsd",
+      "fullDetails": "Chica ttna",
+      "tags": [
+        "React",
+        "TypeScript",
+        "VEXARYX"
+      ],
+      "status": "live",
+      "liveUrl": "https://vexaryx.vercel.app",
+      "imageUrl": "/uploads/233327jpg_1793211054048.jpg",
+      "featured": false,
+      "version": "v1.0.0",
+      "metrics": {
+        "users": "1.2k",
+        "rating": "4.8/5"
+      },
+      "createdAt": "2026-10-28T18:11:17.133Z",
+      "views": 1,
+      "ratings": [
+        {
+          "id": "rate_1793211095578_jsrm",
+          "userIdOrIp": "test_client_1",
+          "stars": 5,
+          "createdAt": "2026-10-28T18:11:35.578Z"
+        },
+        {
+          "id": "rate_1793211104798_a2rv",
+          "userIdOrIp": "test_client_2",
+          "stars": 4,
+          "createdAt": "2026-10-28T18:11:44.798Z"
+        }
+      ],
+      "ratingCount": 2,
+      "rating": 4.5
+    }
+  ],
+  "notifications": [],
+  "reports": [
+    {
+      "id": "rep_1793210872532_7odnc",
+      "reporterEmail": "fedezyljx@gmail.com",
+      "reporterName": "Fede Zyljx",
+      "subject": "Xd",
+      "description": "Nose",
+      "category": "bug",
+      "status": "resolved",
+      "createdAt": "2026-10-28T18:07:52.532Z",
+      "resolutionNote": "Xd"
+    }
+  ],
+  "auditLogs": [
+    {
+      "id": "log_1793211077133_iohfc2",
+      "adminEmail": "fedezyljx@gmail.com",
+      "action": "CREATE_PROJECT",
+      "details": "Creó proyecto: \"Vexaryx\"",
+      "timestamp": "2026-10-28T18:11:17.133Z"
+    },
+    {
+      "id": "log_1793210975502_1hqatc",
+      "adminEmail": "fedezyljx@gmail.com",
+      "action": "CREATE_ANNOUNCEMENT",
+      "details": "Creó anuncio: \"Tetas\" (hero)",
+      "timestamp": "2026-10-28T18:09:35.502Z"
+    },
+    {
+      "id": "log_1793210893890_5wc8h1",
+      "adminEmail": "fedezyljx@gmail.com",
+      "action": "RESOLVE_REPORT",
+      "details": "Actualizó reporte \"Xd\" a estado: resolved",
+      "timestamp": "2026-10-28T18:08:13.890Z"
+    },
+    {
+      "id": "log_1793205220209_ga8f4e",
+      "adminEmail": "fedezyljx@gmail.com",
+      "action": "DELETE_NOTIFICATION",
+      "details": "Eliminó notificación ID: notif_1793205216457_wrzh0",
+      "timestamp": "2026-10-28T16:33:40.209Z"
+    },
+    {
+      "id": "log_1793205216458_kdcmrz",
+      "adminEmail": "fedezyljx@gmail.com",
+      "action": "BROADCAST_NOTIFICATION",
+      "details": "Emitió notificación global: \"Prueba de Notificación con Imagen\"",
+      "timestamp": "2026-10-28T16:33:36.458Z"
+    }
+  ]
+}
