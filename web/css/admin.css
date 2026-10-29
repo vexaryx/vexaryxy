@@ -1,0 +1,72 @@
+/* ========================================================
+   VEXARYX ADMIN PANEL STYLING
+   Warm Espresso & Caramel Minimalist Theme
+   ======================================================== */
+
+.admin-sidebar {
+  background: #110f0e;
+  border-right: 1px solid rgba(245, 240, 230, 0.06);
+}
+
+.admin-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.65rem 0.85rem;
+  border-radius: 0.625rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: #a8a29e;
+  transition: all 0.15s ease;
+}
+
+.admin-nav-item:hover {
+  color: #fafaf9;
+  background-color: rgba(245, 240, 230, 0.04);
+}
+
+.admin-nav-item.active {
+  color: #fafaf9;
+  background: linear-gradient(90deg, rgba(230, 104, 34, 0.15) 0%, rgba(230, 104, 34, 0.03) 100%);
+  border-left: 3px solid #e66822;
+  font-weight: 600;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.admin-table th {
+  background-color: #141210;
+  color: #8c857f;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid rgba(245, 240, 230, 0.06);
+}
+
+.admin-table td {
+  padding: 0.875rem 1rem;
+  font-size: 0.8125rem;
+  border-bottom: 1px solid rgba(245, 240, 230, 0.04);
+}
+
+.admin-table tr:hover td {
+  background-color: rgba(245, 240, 230, 0.02);
+}
+
+.admin-metric-card {
+  background: #141210;
+  border: 1px solid rgba(245, 240, 230, 0.06);
+  border-radius: 0.875rem;
+  padding: 1.25rem;
+  transition: all 0.2s ease;
+}
+
+.admin-metric-card:hover {
+  border-color: rgba(230, 104, 34, 0.3);
+}
