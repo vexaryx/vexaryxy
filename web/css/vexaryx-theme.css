@@ -1,0 +1,94 @@
+/* ========================================================
+   VEXARYX THEME - Minimalist Dark, Warm Espresso & Caramel Amber
+   Inspired by ChatGPT minimalism & Spotify warm dark aesthetics
+   ======================================================== */
+
+:root {
+  /* Warm espresso & dark slate canvas */
+  --vyx-bg-canvas: #0c0b0a;
+  --vyx-bg-surface: #141311;
+  --vyx-bg-elevated: #1d1a17;
+  --vyx-bg-card: #181614;
+
+  /* Subtle warm borders */
+  --vyx-border-subtle: rgba(245, 240, 230, 0.07);
+  --vyx-border-hover: rgba(230, 115, 45, 0.35);
+
+  /* Warm caramel amber & roasted orange */
+  --vyx-accent-primary: #e66822;
+  --vyx-accent-light: #f57a33;
+  --vyx-accent-soft: rgba(230, 104, 34, 0.12);
+  --vyx-accent-warm-brown: #332218;
+
+  /* Refined typography */
+  --vyx-text-title: #fafaf9;
+  --vyx-text-body: #d6d3d1;
+  --vyx-text-muted: #8c857f;
+
+  --vyx-font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --vyx-font-mono: 'JetBrains Mono', monospace;
+}
+
+body {
+  font-family: var(--vyx-font-sans);
+  background-color: var(--vyx-bg-canvas);
+  color: var(--vyx-text-body);
+  overflow-x: hidden;
+  letter-spacing: -0.01em;
+}
+
+/* Tabular figures for telemetry & dates */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Sleek minimalist dark scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0c0b0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #282420;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e66822;
+}
+
+/* Clean minimalist card inspired by ChatGPT surfaces */
+.vyx-card-clean {
+  background: #141311;
+  border: 1px solid rgba(245, 240, 230, 0.06);
+  border-radius: 1rem;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.vyx-card-clean:hover {
+  border-color: rgba(230, 104, 34, 0.28);
+  background: #181614;
+}
+
+/* Warm glow */
+.vyx-warm-glow {
+  box-shadow: 0 0 35px rgba(230, 104, 34, 0.15);
+}
+
+/* Button primary */
+.vyx-btn-caramel {
+  background-color: #e66822;
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 0.75rem;
+  transition: all 0.15s ease;
+}
+
+.vyx-btn-caramel:hover {
+  background-color: #f57a33;
+  box-shadow: 0 4px 18px rgba(230, 104, 34, 0.3);
+}
