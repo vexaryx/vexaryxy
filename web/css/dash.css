@@ -1,0 +1,34 @@
+/* ========================================================
+   VEXARYX DASHBOARD - Clean, Minimalist & Spacious
+   ======================================================== */
+
+.dash-zen-hero {
+  position: relative;
+  border-radius: 1.5rem;
+  background: radial-gradient(circle at 50% 0%, #201b17 0%, #131210 70%);
+  border: 1px solid rgba(245, 240, 230, 0.08);
+}
+
+.dash-pill-tab {
+  transition: all 0.15s ease;
+  border-radius: 9999px;
+  font-size: 0.8125rem;
+}
+
+.dash-pill-tab.active {
+  background-color: #2b241f;
+  color: #fafaf9;
+  border: 1px solid rgba(230, 104, 34, 0.4);
+}
+
+.dash-search-container {
+  background: #171513;
+  border: 1px solid rgba(245, 240, 230, 0.08);
+  border-radius: 9999px;
+  transition: border-color 0.2s ease;
+}
+
+.dash-search-container:focus-within {
+  border-color: #e66822;
+  box-shadow: 0 0 0 2px rgba(230, 104, 34, 0.15);
+}
