@@ -1,0 +1,50 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Global helper functions
+    function isValidId(id) {
+      return id is string && id.size() > 0 && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    // Projects collection: showcase visible to all; persistent store
+    match /projects/{projectId} {
+      allow read, write: if isValidId(projectId);
+    }
+
+    // Announcements collection: public announcements & news
+    match /announcements/{announcementId} {
+      allow read, write: if isValidId(announcementId);
+    }
+
+    // Global Notifications collection
+    match /notifications/{notificationId} {
+      allow read, write: if isValidId(notificationId);
+    }
+
+    // User reports: submissions and management
+    match /reports/{reportId} {
+      allow read, write: if isValidId(reportId);
+    }
+
+    // Users collection: user directory and profiles
+    match /users/{userId} {
+      allow read, write: if isValidId(userId);
+    }
+
+    // Audit logs: platform activities
+    match /auditLogs/{logId} {
+      allow read, write: if isValidId(logId);
+    }
+
+    // Admins registry collection
+    match /admins/{adminId} {
+      allow read, write: if isValidId(adminId);
+    }
+
+    // Default deny for anything else
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
