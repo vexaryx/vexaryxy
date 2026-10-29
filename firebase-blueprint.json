@@ -1,0 +1,143 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "Registered platform user with role and status",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string", "maxLength": 100 },
+        "email": { "type": "string", "format": "email", "maxLength": 150 },
+        "phone": { "type": "string", "maxLength": 30 },
+        "countryCode": { "type": "string", "maxLength": 5 },
+        "countryName": { "type": "string", "maxLength": 80 },
+        "dialCode": { "type": "string", "maxLength": 10 },
+        "role": { "type": "string", "enum": ["admin", "user"] },
+        "status": { "type": "string", "enum": ["active", "suspended"] },
+        "passwordHash": { "type": "string", "maxLength": 200 },
+        "createdAt": { "type": "string" },
+        "avatar": { "type": "string", "maxLength": 500 }
+      },
+      "required": ["id", "name", "email", "phone", "countryCode", "dialCode", "role", "status", "createdAt"]
+    },
+    "Project": {
+      "title": "Project",
+      "description": "Showcase applications, systems, and platforms by VEXARYX",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string", "maxLength": 120 },
+        "description": { "type": "string", "maxLength": 1000 },
+        "category": { "type": "string", "enum": ["app", "web", "system", "api"] },
+        "tags": { "type": "array" },
+        "version": { "type": "string", "maxLength": 20 },
+        "status": { "type": "string", "enum": ["live", "beta", "in_development"] },
+        "imageUrl": { "type": "string", "maxLength": 500 },
+        "fileUrl": { "type": "string", "maxLength": 500 },
+        "fileName": { "type": "string", "maxLength": 200 },
+        "fileSize": { "type": "number" },
+        "fileType": { "type": "string", "maxLength": 20 },
+        "liveUrl": { "type": "string", "maxLength": 500 },
+        "githubUrl": { "type": "string", "maxLength": 500 },
+        "views": { "type": "number" },
+        "rating": { "type": "number" },
+        "ratingCount": { "type": "number" },
+        "ratings": { "type": "array" },
+        "createdAt": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["id", "title", "description", "category", "version", "status", "imageUrl", "createdAt"]
+    },
+    "Announcement": {
+      "title": "Announcement",
+      "description": "Platform announcements, ads, and releases",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string", "maxLength": 150 },
+        "description": { "type": "string", "maxLength": 1500 },
+        "placement": { "type": "string", "enum": ["home", "sidebar", "banner", "popup"] },
+        "status": { "type": "string", "enum": ["active", "paused"] },
+        "mediaType": { "type": "string", "enum": ["image", "video", "url_preview"] },
+        "mediaUrl": { "type": "string", "maxLength": 500 },
+        "externalUrl": { "type": "string", "maxLength": 500 },
+        "badge": { "type": "string", "maxLength": 40 },
+        "clicks": { "type": "number" },
+        "impressions": { "type": "number" },
+        "createdAt": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["id", "title", "description", "placement", "status", "mediaType", "createdAt"]
+    },
+    "Notification": {
+      "title": "Notification",
+      "description": "Global broadcasts to all visitors and users",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string", "maxLength": 120 },
+        "message": { "type": "string", "maxLength": 1000 },
+        "type": { "type": "string", "enum": ["news", "alert", "promotion", "update"] },
+        "imageUrl": { "type": "string", "maxLength": 500 },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["id", "title", "message", "type", "createdAt"]
+    },
+    "Report": {
+      "title": "Report",
+      "description": "User feedback, bug reports, and incident tickets",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "reporterName": { "type": "string", "maxLength": 100 },
+        "reporterEmail": { "type": "string", "format": "email", "maxLength": 150 },
+        "subject": { "type": "string", "maxLength": 200 },
+        "description": { "type": "string", "maxLength": 2000 },
+        "category": { "type": "string", "enum": ["bug", "abuse", "inquiry", "feature"] },
+        "status": { "type": "string", "enum": ["pending", "in_review", "resolved", "dismissed"] },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["id", "reporterName", "reporterEmail", "subject", "description", "category", "status", "createdAt"]
+    },
+    "AuditLog": {
+      "title": "AuditLog",
+      "description": "Administrative audit trail",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "adminEmail": { "type": "string", "format": "email", "maxLength": 150 },
+        "action": { "type": "string", "maxLength": 60 },
+        "target": { "type": "string", "maxLength": 100 },
+        "details": { "type": "string", "maxLength": 1000 },
+        "timestamp": { "type": "string" }
+      },
+      "required": ["id", "adminEmail", "action", "target", "details", "timestamp"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "User profiles and credentials"
+    },
+    "/projects/{projectId}": {
+      "schema": "Project",
+      "description": "Showcase projects and platform applications"
+    },
+    "/announcements/{announcementId}": {
+      "schema": "Announcement",
+      "description": "Announcements, ads, and updates"
+    },
+    "/notifications/{notificationId}": {
+      "schema": "Notification",
+      "description": "Global notifications broadcasted to visitors"
+    },
+    "/reports/{reportId}": {
+      "schema": "Report",
+      "description": "User submitted support reports"
+    },
+    "/auditLogs/{logId}": {
+      "schema": "AuditLog",
+      "description": "Administrative actions audit log"
+    }
+  }
+}
