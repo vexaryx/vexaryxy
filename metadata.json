@@ -1,0 +1,6 @@
+{
+  "name": "VEXARYX | Ecosistema Tecnológico y Plataforma Digital",
+  "description": "Plataforma oficial de VEXARYX: desarrollo de aplicaciones, proyectos tecnológicos, anuncios dinámicos, noticias y panel administrativo.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
