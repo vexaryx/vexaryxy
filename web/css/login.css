@@ -1,0 +1,44 @@
+/* ========================================================
+   VEXARYX AUTHENTICATION & LOGIN STYLING
+   Warm Espresso & Caramel Minimalist Theme
+   ======================================================== */
+
+.login-glass-card {
+  background: #141210;
+  border: 1px solid rgba(245, 240, 230, 0.08);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), 0 0 30px rgba(230, 104, 34, 0.08);
+}
+
+.login-input {
+  background: #1b1815;
+  border: 1px solid rgba(245, 240, 230, 0.08);
+  color: #fafaf9;
+  transition: all 0.2s ease;
+}
+
+.login-input:focus {
+  border-color: #e66822;
+  box-shadow: 0 0 0 2px rgba(230, 104, 34, 0.2);
+  outline: none;
+}
+
+.auth-tab-btn {
+  position: relative;
+  font-weight: 600;
+  padding-bottom: 0.75rem;
+  transition: all 0.2s ease;
+}
+
+.auth-tab-btn.active {
+  color: #fafaf9;
+}
+
+.auth-tab-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #e66822;
+}
